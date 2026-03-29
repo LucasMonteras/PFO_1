@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Encabezado principal del sitio con presentación breve y acceso rápido a navegación -->
+    <header class="header">
+        <div class="contenedor">
+            <h1 class="logo">Lucas | Portafolio Personal</h1>
+            <p class="subtitulo">Frontend en formación, creando interfaces modernas, claras y responsivas.</p>
+        </div>
+    </header>
+
+    <!-- Barra de navegación principal con enlaces internos a las secciones obligatorias -->
+    <nav class="nav">
+        <div class="contenedor nav-contenido">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#tarjetas">Proyectos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#peliculas">Películas</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Sección de presentación personal: describe quién soy, intereses y misión como desarrollador -->
+        <section id="sobre-mi" class="seccion">
+            <div class="contenedor sobre-mi">
+                <div class="sobre-mi-texto">
+                    <h2>Sobre mí</h2>
+                    <p>
+                        Hola, soy Lucas. Me estoy formando en desarrollo de software y me interesa crear soluciones web
+                        modernas, funcionales y bien organizadas. Me gusta aprender sobre frontend, diseño de
+                        interfaces,
+                        experiencia de usuario y buenas prácticas de desarrollo. Mi misión como desarrollador es
+                        construir
+                        productos útiles que combinen diseño, claridad y tecnología.
+                    </p>
+                </div>
+                <div class="sobre-mi-imagen">
+                    <img src="img/perfil.jpg" alt="Imagen de perfil o avatar del desarrollador">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de tarjetas en formato columnas usando Grid para mostrar proyectos o experiencias -->
+        <section id="tarjetas" class="seccion seccion-alterna">
+            <div class="contenedor">
+                <h2>Proyectos destacados</h2>
+                <div class="grid-tarjetas">
+                    <article class="tarjeta">
+                        <img src="img/proyecto1.jpg" alt="Imagen del primer proyecto">
+                        <h3>Landing Page Profesional</h3>
+                        <p>
+                            Desarrollo de una página web moderna enfocada en presentar servicios de forma clara, visual
+                            y accesible.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <img src="img/proyecto2.jpg" alt="Imagen del segundo proyecto">
+                        <h3>Diseño Responsivo</h3>
+                        <p>
+                            Maquetación adaptable a distintos dispositivos usando HTML, CSS, Grid, Flexbox y buenas
+                            prácticas visuales.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de habilidades organizada en tabla para mostrar tecnologías actuales e intereses futuros -->
+        <section id="habilidades" class="seccion">
+            <div class="contenedor">
+                <h2>Habilidades</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tecnologías que domino</th>
+                            <th>Tecnologías que quiero aprender</th>
+                            <th>Hobbies</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>TypeScript</td>
+                            <td>Entrenar</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>React avanzado</td>
+                            <td>Aprender programación</td>
+                        </tr>
+                        <tr>
+                            <td>C#</td>
+                            <td>UI/UX</td>
+                            <td>Mirar películas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion seccion-alterna">
+            <div class="contenedor">
+                <h2>Contacto</h2>
+                <form class="formulario">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre">
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingresá tu apellido">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Ingresá tu email">
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ingresá tu teléfono">
+                    </div>
+
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sección de películas favoritas con criterio personal, imagen y breve comentario -->
+        <section id="peliculas" class="seccion">
+            <div class="contenedor">
+                <h2>Mis películas favoritas</h2>
+                <div class="grid-peliculas">
+                    <article class="pelicula">
+                        <img src="img/peli1.jpg" alt="Póster de la película Interestelar">
+                        <h3>Interestelar</h3>
+                        <p>
+                            Me gusta por su historia, la emoción y la forma en que combina ciencia, tiempo y familia.
+                        </p>
+                    </article>
+
+                    <article class="pelicula">
+                        <img src="img/peli2.jpg" alt="Póster de la película El Caballero de la Noche">
+                        <h3>El Caballero de la Noche</h3>
+                        <p>
+                            Una película intensa, con grandes actuaciones y una historia que va mucho más allá del
+                            género de superhéroes.
+                        </p>
+                    </article>
+
+                    <article class="pelicula">
+                        <img src="img/peli3.jpg" alt="Póster de la película Gladiador">
+                        <h3>Gladiador</h3>
+                        <p>
+                            La considero una de las mejores por su épica, su música y el mensaje de honor y
+                            perseverancia.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <p>© 2026 Lucas - Portafolio Personal</p>
+            <div class="redes">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Email</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
