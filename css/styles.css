@@ -5,19 +5,38 @@
 }
 
 :root {
-    --color-primario: #1e3a8a;
-    --color-secundario: #2563eb;
-    --color-fondo: #f8fafc;
-    --color-texto: #1f2937;
+    --color-fondo: #000000;
+    --color-primario: #ffe81f;
+    --color-secundario: #60a5fa;
+    --color-texto: #f8fafc;
+    --color-texto-suave: #cbd5e1;
     --color-blanco: #ffffff;
-    --color-sombra: rgba(0, 0, 0, 0.08);
+    --color-borde: #253047;
+    --color-sombra: rgba(0, 0, 0, 0.35);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fondo general con estrellas */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--color-fondo);
     color: var(--color-texto);
     line-height: 1.6;
+    background-color: #000;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+        radial-gradient(1.5px 1.5px at 40px 70px, #ffffff, transparent),
+        radial-gradient(2px 2px at 130px 40px, #dbeafe, transparent),
+        radial-gradient(1.5px 1.5px at 190px 90px, #ffffff, transparent),
+        radial-gradient(2px 2px at 260px 150px, #ffffff, transparent),
+        radial-gradient(1.5px 1.5px at 320px 50px, #fde68a, transparent),
+        radial-gradient(2px 2px at 420px 120px, #ffffff, transparent),
+        radial-gradient(1.5px 1.5px at 520px 80px, #ffffff, transparent),
+        radial-gradient(2px 2px at 620px 40px, #dbeafe, transparent),
+        radial-gradient(1.5px 1.5px at 760px 160px, #ffffff, transparent);
+    background-size: 800px 300px;
 }
 
 img {
@@ -28,12 +47,7 @@ img {
 
 a {
     text-decoration: none;
-    color: var(--color-blanco);
     transition: 0.3s ease;
-}
-
-ul {
-    list-style: none;
 }
 
 .contenedor {
@@ -42,29 +56,85 @@ ul {
     margin: 0 auto;
 }
 
+/* Header oscuro con sensación espacial */
 .header {
-    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
-    color: var(--color-blanco);
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 5rem 1rem 4rem;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.80)),
+        #000;
+    border-bottom: 1px solid rgba(255, 232, 31, 0.15);
 }
 
-.logo {
-    font-size: 2.2rem;
-    margin-bottom: 0.8rem;
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(2px 2px at 8% 18%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 16% 60%, #fff, transparent),
+        radial-gradient(2px 2px at 24% 32%, #dbeafe, transparent),
+        radial-gradient(1.5px 1.5px at 33% 12%, #fff, transparent),
+        radial-gradient(2px 2px at 44% 52%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 57% 24%, #fde68a, transparent),
+        radial-gradient(2px 2px at 68% 16%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 79% 46%, #fff, transparent),
+        radial-gradient(2px 2px at 88% 28%, #dbeafe, transparent),
+        radial-gradient(1.5px 1.5px at 93% 70%, #fff, transparent);
+    opacity: 0.95;
 }
 
+.header .contenedor {
+    position: relative;
+    z-index: 1;
+}
+
+/* Título estilo inspirado en Star Wars */
+.logo-starwars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    margin-bottom: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.9;
+}
+
+.logo-starwars span {
+    font-size: clamp(2.8rem, 8vw, 6rem);
+    letter-spacing: 0.2rem;
+    color: #000000;
+    -webkit-text-stroke: 3px #ffe81f;
+    text-shadow:
+        0 0 10px rgba(255, 232, 31, 0.12),
+        0 0 18px rgba(255, 232, 31, 0.08);
+}
+
+/* Subtítulo */
 .subtitulo {
-    font-size: 1.1rem;
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 1.05rem;
     font-weight: 300;
+    color: var(--color-texto-suave);
 }
 
 .nav {
-    background-color: #0f172a;
+    background-color: rgba(15, 23, 42, 0.95);
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 10;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(96, 165, 250, 0.15);
 }
 
 .nav-contenido {
@@ -74,8 +144,14 @@ ul {
     flex-wrap: wrap;
 }
 
+.nav a {
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
 .nav a:hover {
-    color: #93c5fd;
+    color: var(--color-primario);
+    text-shadow: 0 0 8px rgba(247, 211, 84, 0.5);
 }
 
 .seccion {
@@ -83,14 +159,16 @@ ul {
 }
 
 .seccion-alterna {
-    background-color: #eaf2ff;
+    background-color: rgba(17, 24, 39, 0.75);
 }
 
 h2 {
+    font-family: 'Orbitron', sans-serif;
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
     color: var(--color-primario);
+    letter-spacing: 1px;
 }
 
 .sobre-mi {
@@ -105,16 +183,59 @@ h2 {
     flex: 1 1 300px;
 }
 
+.sobre-mi-texto p {
+    color: var(--color-texto-suave);
+    font-size: 1rem;
+}
+
 .sobre-mi-imagen {
     flex: 1 1 250px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sobre-mi-imagen::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, rgba(96, 165, 250, 0.18) 0%, rgba(255, 232, 31, 0.10) 35%, transparent 70%);
+    filter: blur(18px);
+    z-index: 0;
 }
 
 .sobre-mi-imagen img {
-    width: 70%;
+    position: relative;
+    z-index: 1;
+    width: 100%;
     max-width: 320px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     margin: 0 auto;
-    box-shadow: 0 10px 25px var(--color-sombra);
+    border-radius: 1.2rem;
+    border: 2px solid rgba(255, 232, 31, 0.65);
+    background-color: #020617;
+    padding: 0.25rem;
+    box-shadow:
+        0 0 0 1px rgba(96, 165, 250, 0.20),
+        0 12px 30px rgba(0, 0, 0, 0.55),
+        0 0 18px rgba(255, 232, 31, 0.10);
+    filter: brightness(0.82) contrast(1.08) saturate(0.88);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.sobre-mi-imagen img:hover {
+    transform: scale(1.02);
+    filter: brightness(0.88) contrast(1.1) saturate(0.95);
+    box-shadow:
+        0 0 0 1px rgba(96, 165, 250, 0.25),
+        0 16px 34px rgba(0, 0, 0, 0.65),
+        0 0 22px rgba(255, 232, 31, 0.16);
 }
 
 .grid-tarjetas {
@@ -124,51 +245,84 @@ h2 {
 }
 
 .tarjeta {
-    background-color: var(--color-blanco);
+    height: 100%;
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.95), rgba(15, 23, 42, 0.95));
     padding: 1.2rem;
     border-radius: 1rem;
     box-shadow: 0 8px 20px var(--color-sombra);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(96, 165, 250, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .tarjeta:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+    border-color: rgba(247, 211, 84, 0.45);
+}
+
+.tarjeta-link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.tarjeta-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tarjeta img {
+    margin-bottom: 1rem;
+    border: 1px solid rgba(247, 211, 84, 0.15);
 }
 
 .tarjeta h3 {
-    margin: 1rem 0 0.6rem;
+    margin: 0 0 0.6rem;
     color: var(--color-secundario);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+}
+
+.tarjeta p {
+    color: var(--color-texto-suave);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--color-blanco);
+    background-color: rgba(15, 23, 42, 0.95);
     box-shadow: 0 8px 20px var(--color-sombra);
     border-radius: 1rem;
     overflow: hidden;
+    border: 1px solid rgba(96, 165, 250, 0.15);
 }
 
 th,
 td {
     padding: 1rem;
     text-align: center;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+td {
+    color: var(--color-texto-suave);
 }
 
 th {
     background-color: var(--color-primario);
-    color: var(--color-blanco);
+    color: #111827;
+    font-weight: 700;
 }
 
 .formulario {
     max-width: 700px;
     margin: 0 auto;
-    background-color: var(--color-blanco);
+    background-color: rgba(15, 23, 42, 0.96);
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 8px 20px var(--color-sombra);
+    border: 1px solid rgba(247, 211, 84, 0.18);
 }
 
 .campo {
@@ -180,18 +334,26 @@ th {
 .campo label {
     margin-bottom: 0.4rem;
     font-weight: 600;
+    color: var(--color-texto);
 }
 
 .campo input {
     padding: 0.9rem;
-    border: 1px solid #cbd5e1;
+    border: 1px solid var(--color-borde);
     border-radius: 0.7rem;
     font-size: 1rem;
+    background-color: rgba(17, 24, 39, 0.9);
+    color: var(--color-texto);
+}
+
+.campo input::placeholder {
+    color: #94a3b8;
 }
 
 .campo input:focus {
     outline: none;
     border-color: var(--color-secundario);
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
 }
 
 .btn {
@@ -200,17 +362,18 @@ th {
     padding: 1rem;
     border: none;
     border-radius: 0.8rem;
-    background-color: var(--color-secundario);
-    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    color: #111827;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-    background-color: var(--color-primario);
+    background-color: #ffe27a;
     transform: scale(1.02);
+    box-shadow: 0 0 18px rgba(247, 211, 84, 0.35);
 }
 
 .grid-peliculas {
@@ -220,22 +383,35 @@ th {
 }
 
 .pelicula {
-    background-color: var(--color-blanco);
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.95), rgba(15, 23, 42, 0.95));
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0 8px 20px var(--color-sombra);
+    border: 1px solid rgba(247, 211, 84, 0.14);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pelicula:hover {
+    transform: translateY(-6px);
+    border-color: rgba(96, 165, 250, 0.4);
 }
 
 .pelicula h3 {
     margin: 1rem 0 0.5rem;
     color: var(--color-secundario);
+    font-size: 1rem;
+}
+
+.pelicula p {
+    color: var(--color-texto-suave);
 }
 
 .footer {
-    background-color: #0f172a;
+    background-color: #020617;
     color: var(--color-blanco);
     text-align: center;
     padding: 2rem 1rem;
+    border-top: 1px solid rgba(247, 211, 84, 0.15);
 }
 
 .redes {
@@ -246,17 +422,17 @@ th {
     flex-wrap: wrap;
 }
 
+.redes a {
+    color: var(--color-texto-suave);
+}
+
 .redes a:hover {
-    color: #93c5fd;
+    color: var(--color-primario);
 }
 
 @media (max-width: 768px) {
-    .logo {
-        font-size: 1.8rem;
-    }
-
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .sobre-mi {
@@ -270,5 +446,20 @@ th {
 
     .nav-contenido {
         gap: 1rem;
+    }
+
+    th,
+    td {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .logo-starwars span {
+        font-size: clamp(2.3rem, 10vw, 4rem);
+        -webkit-text-stroke: 2px #ffe81f;
+    }
+
+    .subtitulo {
+        font-size: 0.95rem;
     }
 }

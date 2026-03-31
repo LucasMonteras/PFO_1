@@ -7,7 +7,9 @@
     <title>Mi Portafolio Personal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -16,8 +18,13 @@
     <!-- Encabezado principal del sitio con presentación breve y acceso rápido a navegación -->
     <header class="header">
         <div class="contenedor">
-            <h1 class="logo">Lucas | Portafolio Personal</h1>
-            <p class="subtitulo">Frontend en formación, creando interfaces modernas, claras y responsivas.</p>
+            <h1 class="logo-starwars">
+                <span>Lucas</span>
+                <span>Monteras</span>
+            </h1>
+            <p class="subtitulo">
+                Desarrollador de software 
+            </p>
         </div>
     </header>
 
@@ -40,12 +47,13 @@
                 <div class="sobre-mi-texto">
                     <h2>Sobre mí</h2>
                     <p>
-                        Hola, soy Lucas. Me estoy formando en desarrollo de software y me interesa crear soluciones web
-                        modernas, funcionales y bien organizadas. Me gusta aprender sobre frontend, diseño de
-                        interfaces,
-                        experiencia de usuario y buenas prácticas de desarrollo. Mi misión como desarrollador es
-                        construir
-                        productos útiles que combinen diseño, claridad y tecnología.
+                        Hola, soy Lucas. Durante muchos años me desempeñé como maquinista naval, una etapa que me formó
+                        en la disciplina, la responsabilidad y la resolución de problemas en entornos exigentes. Con el
+                        tiempo decidí dar un giro profesional hacia el desarrollo de software, un área en la que
+                        encontré una nueva forma de construir, mejorar procesos y crear soluciones útiles. Hace dos años
+                        trabajo como desarrollador, mientras continúo formándome y fortaleciendo mis conocimientos en
+                        tecnologías web. Además, soy una persona que prioriza la familia, un valor que guía mi forma de
+                        vivir, de comprometerme con mis objetivos y de proyectar mi crecimiento personal y profesional.
                     </p>
                 </div>
                 <div class="sobre-mi-imagen">
@@ -57,25 +65,59 @@
         <!-- Sección de tarjetas en formato columnas usando Grid para mostrar proyectos o experiencias -->
         <section id="tarjetas" class="seccion seccion-alterna">
             <div class="contenedor">
-                <h2>Proyectos destacados</h2>
+                <h2>Proyectos y experiencias</h2>
                 <div class="grid-tarjetas">
+
                     <article class="tarjeta">
-                        <img src="img/proyecto1.jpg" alt="Imagen del primer proyecto">
-                        <h3>Landing Page Profesional</h3>
+                        <h3>Proyecto Interno con .NET y React</h3>
                         <p>
-                            Desarrollo de una página web moderna enfocada en presentar servicios de forma clara, visual
-                            y accesible.
+                            Me encuentro trabajando en el desarrollo de un sistema interno utilizando .NET, React,
+                            Entity Framework y SQL Server. Dentro de este entorno participo en funcionalidades
+                            relacionadas con la firma digital GDE aplicada a fojas de conceptos, colaborando en procesos
+                            de desarrollo, integración y mantenimiento. Debido a que se trata de una plataforma interna
+                            con información clasificada, no es posible compartir imágenes ni detalles específicos, pero
+                            esta experiencia me permite seguir creciendo en backend, frontend, base de datos y mejora de
+                            soluciones orientadas a procesos reales.
                         </p>
                     </article>
 
-                    <article class="tarjeta">
-                        <img src="img/proyecto2.jpg" alt="Imagen del segundo proyecto">
-                        <h3>Diseño Responsivo</h3>
-                        <p>
-                            Maquetación adaptable a distintos dispositivos usando HTML, CSS, Grid, Flexbox y buenas
-                            prácticas visuales.
-                        </p>
-                    </article>
+                    <a href="https://sehmat.website/" target="_blank" rel="noopener noreferrer" class="tarjeta-link">
+                        <article class="tarjeta">
+                            
+                            <h3>Sitio Web Corporativo - Sehmat</h3>
+                            <p>
+                                Desarrollé una landing page profesional para Sehmat, un estudio especializado en
+                                seguridad e
+                                higiene laboral, con la intención de crear una presencia web clara, moderna y confiable.
+                                Trabajé en la organización del contenido para mostrar de forma atractiva sus servicios,
+                                credenciales, equipo de trabajo y medios de contacto. Para este proyecto utilicé Git, lo
+                                que
+                                me permitió llevar un control ordenado de las versiones y actualizar el sitio de forma
+                                más
+                                segura. Además, la página está publicada en DonWeb, lo que me facilita la conexión con
+                                el
+                                repositorio y ver reflejadas las actualizaciones de manera rápida en el sitio.
+                            </p>
+                        </article>
+                    </a>
+
+                    <a href="https://clima-seven-bice.vercel.app/" target="_blank" rel="noopener noreferrer"
+                        class="tarjeta-link">
+                        <article class="tarjeta">
+                            
+                            <h3>App de Meteorología - METEREOLOGIA LGM</h3>
+                            <p>
+                                Desarrollé una aplicación web interactiva para consultar el clima en distintas ciudades,
+                                mostrando información meteorológica en tiempo real de forma clara y visual. El proyecto
+                                fue realizado con HTML, CSS y JavaScript, integrando la API de OpenWeatherMap para
+                                obtener datos actualizados. También incorporé una interfaz moderna con fondo dinámico,
+                                efectos visuales y diseño responsivo para mejorar la experiencia de usuario. Para el
+                                desarrollo utilicé Git y GitHub como control de versiones, organizando los cambios y
+                                facilitando la publicación del proyecto.
+                            </p>
+                        </article>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -113,6 +155,7 @@
             </div>
         </section>
 
+        <!-- Sección de contacto con formulario básico solicitado por la consigna -->
         <section id="contacto" class="seccion seccion-alterna">
             <div class="contenedor">
                 <h2>Contacto</h2>
@@ -142,34 +185,35 @@
             </div>
         </section>
 
-        <!-- Sección de películas favoritas con criterio personal, imagen y breve comentario -->
+        <!-- Sección de películas favoritas inspirada en Star Wars, integrada con la estética general del sitio -->
         <section id="peliculas" class="seccion">
             <div class="contenedor">
                 <h2>Mis películas favoritas</h2>
                 <div class="grid-peliculas">
                     <article class="pelicula">
-                        <img src="img/peli1.jpg" alt="Póster de la película Interestelar">
-                        <h3>Interestelar</h3>
+                        <img src="img/peli1.jpg" alt="Póster de Star Wars Episode III Revenge of the Sith">
+                        <h3>Star Wars: Episode III - Revenge of the Sith</h3>
                         <p>
-                            Me gusta por su historia, la emoción y la forma en que combina ciencia, tiempo y familia.
+                            Me gusta por su intensidad, el conflicto interno de Anakin y el momento clave en la
+                            transformación de la saga.
                         </p>
                     </article>
 
                     <article class="pelicula">
-                        <img src="img/peli2.jpg" alt="Póster de la película El Caballero de la Noche">
-                        <h3>El Caballero de la Noche</h3>
+                        <img src="img/peli2.jpg" alt="Póster de Star Wars Episode V The Empire Strikes Back">
+                        <h3>Star Wars: Episode V - The Empire Strikes Back</h3>
                         <p>
-                            Una película intensa, con grandes actuaciones y una historia que va mucho más allá del
-                            género de superhéroes.
+                            La considero una de las mejores por su tono más oscuro, su desarrollo narrativo y uno de los
+                            giros más recordados del cine.
                         </p>
                     </article>
 
                     <article class="pelicula">
-                        <img src="img/peli3.jpg" alt="Póster de la película Gladiador">
-                        <h3>Gladiador</h3>
+                        <img src="img/peli3.jpg" alt="Póster de Star Wars Episode VI Return of the Jedi">
+                        <h3>Star Wars: Episode VI - Return of the Jedi</h3>
                         <p>
-                            La considero una de las mejores por su épica, su música y el mensaje de honor y
-                            perseverancia.
+                            Me gusta por el cierre épico, la redención de Darth Vader y la batalla final entre el lado
+                            oscuro y la esperanza.
                         </p>
                     </article>
                 </div>
