@@ -436,36 +436,79 @@ th {
     color: var(--color-primario);
 }
 
+.carrusel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.carrusel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0.5rem;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+.carrusel .pelicula {
+    min-width: 280px;
+    max-width: 280px;
+    flex: 0 0 auto;
+}
+
+.carrusel .pelicula img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(247, 211, 84, 0.18);
+}
+
+.carrusel-btn {
+    background-color: rgba(15, 23, 42, 0.95);
+    color: var(--color-primario);
+    border: 1px solid rgba(247, 211, 84, 0.3);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    flex-shrink: 0;
+}
+
+.carrusel-btn:hover {
+    background-color: rgba(30, 41, 59, 1);
+    box-shadow: 0 0 12px rgba(247, 211, 84, 0.25);
+    transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
-    h2 {
-        font-size: 1.4rem;
+    .carrusel-wrapper {
+        gap: 0.5rem;
     }
 
-    .sobre-mi {
-        flex-direction: column;
-        text-align: center;
+    .carrusel .pelicula {
+        min-width: 240px;
+        max-width: 240px;
     }
 
-    .sobre-mi-imagen img {
-        width: 80%;
+    .carrusel .pelicula img {
+        height: 340px;
     }
 
-    .nav-contenido {
-        gap: 1rem;
-    }
-
-    th,
-    td {
-        padding: 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    .logo-starwars span {
-        font-size: clamp(2.3rem, 10vw, 4rem);
-        -webkit-text-stroke: 2px #ffe81f;
-    }
-
-    .subtitulo {
-        font-size: 0.95rem;
+    .carrusel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
     }
 }

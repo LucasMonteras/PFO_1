@@ -23,7 +23,7 @@
                 <span>Monteras</span>
             </h1>
             <p class="subtitulo">
-                Desarrollador de software
+                Desarrollador de software 
             </p>
         </div>
     </header>
@@ -66,11 +66,10 @@
         <section id="tarjetas" class="seccion seccion-alterna">
             <div class="contenedor">
                 <h2>Proyectos y experiencias</h2>
-                <div class="grid-tarjetas">
+                <div class="grid-tarjetas" >
 
                     <article class="tarjeta">
-                        <img src="img/codigo.jpg"
-                            alt="Imagen representativa de un sistema interno desarrollado con .NET, React, Entity Framework y SQL Server">
+                        <img src="img/codigo.jpg" alt="Imagen representativa de un sistema interno desarrollado con .NET, React, Entity Framework y SQL Server">
                         <h3>Proyecto Interno con .NET y React</h3>
                         <p>
                             Me encuentro trabajando en el desarrollo de un sistema interno utilizando .NET, React,
@@ -87,7 +86,7 @@
                         <article class="tarjeta">
 
                             <img src="img/sehmat.png" alt="Imagen Sehmat">
-
+                            
                             <h3>Sitio Web Corporativo - Sehmat</h3>
                             <p>
                                 Desarrollé una landing page profesional para Sehmat, un estudio especializado en
@@ -110,7 +109,7 @@
                         <article class="tarjeta">
 
                             <img src="img/metereologia.png" alt="Imagen meterología">
-
+                            
                             <h3>App de Meteorología - METEREOLOGIA LGM</h3>
                             <p>
                                 Desarrollé una aplicación web interactiva para consultar el clima en distintas ciudades,
@@ -191,7 +190,7 @@
             </div>
         </section>
 
-        <!-- Sección de películas favoritas inspirada en Star Wars, integrada con la estética general del sitio -->
+        <!-- Sección de películas favoritas inspirada en Star Wars, integrada con la estética general del sitio 
         <section id="peliculas" class="seccion">
             <div class="contenedor">
                 <h2>Mis películas favoritas</h2>
@@ -224,7 +223,88 @@
                     </article>
                 </div>
             </div>
-        </section>
+        </section>-->
+
+
+        <!-- Sección de películas favoritas inspirada en Star Wars, integrada con la estética general del sitio -->
+<section id="peliculas" class="seccion">
+    <div class="contenedor">
+        <h2>La saga de Star Wars</h2>
+
+        <div class="carrusel-wrapper">
+            <button class="carrusel-btn carrusel-btn-prev" onclick="moverCarrusel(-1)">&#10094;</button>
+
+            <div class="carrusel" id="carrusel-starwars">
+                <article class="pelicula">
+                    <img src="img/ep1.jpg" alt="Póster de Star Wars Episode I The Phantom Menace">
+                    <h3>Episode I - The Phantom Menace</h3>
+                    <p>El inicio de la historia, donde comienza el camino de Anakin Skywalker y se expande el universo de la saga.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="img/ep2.jpg" alt="Póster de Star Wars Episode II Attack of the Clones">
+                    <h3>Episode II - Attack of the Clones</h3>
+                    <p>Una etapa clave en la caída de la República, con más tensión política y crecimiento del conflicto galáctico.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="img/ep3.jpg" alt="Póster de Star Wars Episode III Revenge of the Sith">
+                    <h3>Episode III - Revenge of the Sith</h3>
+                    <p>Una de mis favoritas por su intensidad, el conflicto interno de Anakin y la transformación definitiva de la saga.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="img/ep4.jpg" alt="Póster de Star Wars Episode IV A New Hope">
+                    <h3>Episode IV - A New Hope</h3>
+                    <p>La película que dio origen a todo, con una historia clásica de aventura, esperanza y lucha contra el Imperio.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="img/ep5.jpg" alt="Póster de Star Wars Episode V The Empire Strikes Back">
+                    <h3>Episode V - The Empire Strikes Back</h3>
+                    <p>Una de las mejores por su tono más oscuro, su desarrollo narrativo y uno de los giros más recordados del cine.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="img/ep6.jpg" alt="Póster de Star Wars Episode VI Return of the Jedi">
+                    <h3>Episode VI - Return of the Jedi</h3>
+                    <p>Me gusta por el cierre épico, la redención de Darth Vader y la batalla final entre el lado oscuro y la esperanza.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="img/ep7.jpg" alt="Póster de Star Wars Episode VII The Force Awakens">
+                    <h3>Episode VII - The Force Awakens</h3>
+                    <p>Una nueva etapa de la saga, con personajes renovados y un regreso visualmente impactante al universo Star Wars.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="img/Star Wars Episode VIII The Last Jedi.png" alt="Póster de Star Wars Episode VIII The Last Jedi">
+                    <h3>Episode VIII - The Last Jedi</h3>
+                    <p>Una entrega con decisiones arriesgadas, nuevos enfoques y una mirada distinta sobre los héroes de la saga.</p>
+                </article>
+
+                <article class="pelicula">
+                    <img src="img/Episode IX The Rise of Skywalker.png" alt="Póster de Star Wars Episode IX The Rise of Skywalker">
+                    <h3>Episode IX - The Rise of Skywalker</h3>
+                    <p>El cierre de la saga Skywalker, con grandes enfrentamientos, legado y resolución de la historia principal.</p>
+                </article>
+            </div>
+
+            <button class="carrusel-btn carrusel-btn-next" onclick="moverCarrusel(1)">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    function moverCarrusel(direccion) {
+        const carrusel = document.getElementById("carrusel-starwars");
+        const desplazamiento = 320;
+        carrusel.scrollBy({
+            left: direccion * desplazamiento,
+            behavior: "smooth"
+        });
+    }
+</script>
 
     </main>
 
