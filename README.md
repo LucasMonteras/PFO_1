@@ -15,8 +15,7 @@ Este proyecto consiste en el desarrollo de una Landing Page de Portafolio Person
 - [x] Carpeta `img` para los recursos gráficos del sitio.
 - [x] Repositorio en GitHub creado y actualizado con el código final.
 - [x] Proyecto publicado y accesible en la web.
-- [ ] **URL de GitHub Pages:** PEGAR_ACÁ_TU_LINK
-- [ ] **URL de Vercel:** PEGAR_ACÁ_TU_LINK
+- [x] **URL de Vercel:** https://pfo-1-nine.vercel.app/
 
 ### 2. Diseño y Estilos (CSS)
 - [x] Uso de Google Fonts para la tipografía del sitio (`Orbitron` y `Poppins`).
